@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TableService } from './table.service';
+import { Table } from './Table';
 
 @Component({
   selector: 'app-table',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableComponent implements OnInit {
 
-  constructor() { }
+	roster: Table[];
+
+  constructor(private tservice: TableService) { }
 
   ngOnInit() {
+  	this
+  		.tservice
+  		.getRoster()
+  		.subscribe((data: Table[]) => {
+  			this.roster = data;
+  		});
   }
 
 }

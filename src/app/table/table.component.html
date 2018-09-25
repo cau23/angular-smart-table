@@ -1,3 +1,16 @@
-<p>
-  table works!
-</p>
+<<table>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Age</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let roster of rosters">
+			<td>{{ roster.id }}</td>
+			<td>{{ roster.name }}</td>
+			<td>{{ roster.age }}</td>
+		</tr>
+	</tbody>
+</table>
