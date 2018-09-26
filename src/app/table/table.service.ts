@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class TableService {
   constructor(private http: HttpClient) { }
   url = 'http://localhost:4000';
-  getCharacters() {
+  getRoster() {
     return this
             .http
             .get(`${this.url}/roster`);

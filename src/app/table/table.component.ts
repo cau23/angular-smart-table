@@ -5,7 +5,7 @@ import { Table } from './Table';
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
-  styleUrls: ['./table.component.css']
+  styleUrls: []
 })
 export class TableComponent implements OnInit {
 
