@@ -1,16 +1,5 @@
-<table>
-	<thead>
-		<tr>
-			<th>ID</th>
-			<th>Name</th>
-			<th>Age</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr *ngFor="let rosters of roster">
-			<td>{{ roster.id }}</td>
-			<td>{{ roster.name }}</td>
-			<td>{{ roster.age }}</td>
-		</tr>
-	</tbody>
-</table>
+<ng2-smart-table 
+    [settings]="settings" 
+    [source]="rosters">
+</ng2-smart-table>
+
