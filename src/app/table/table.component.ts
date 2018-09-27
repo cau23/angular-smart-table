@@ -9,17 +9,34 @@ import { Table } from './Table';
 })
 export class TableComponent implements OnInit {
 
-	roster: Table[];
+	rosters: Table[];
+
+  settings = {
+    columns: {
+      id: {
+        title: 'ID'
+      },
+      name: {
+        title: 'Name'
+      },
+      age: {
+        title: 'Age'
+      }
+    }
+  };
 
   constructor(private tservice: TableService) { }
 
   ngOnInit() {
   	this
   		.tservice
-  		.getRoster()
+  		.getRosters()
   		.subscribe((data: Table[]) => {
-  			this.roster = data;
+  			this.rosters = data;
   		});
-  }
+  
+	 }
+  
+	
 
 }
